@@ -1,6 +1,6 @@
 # REGISTRE D'ASSETS — Le Colosse et l'Oasis
 
-> Projet : *Le Colosse et l'Oasis* · 37 assets actifs · 3 retirés · 2 critiques
+> Projet : *Le Colosse et l'Oasis* · 40 assets actifs · 6 retirés · 2 critiques
 > Fiche associée : `FICHE_DE_PLAN_colosse.md`
 > Statuts : ⬜ à produire · 🟡 en cours · ✅ validé
 > Pipeline : Z-Image Turbo (T2I) · Qwen Image Edit 2511 (I2I) · PNG sRGB 8 bits
@@ -55,15 +55,10 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
   ```
 - **Fichier** : `—` · **Seed** : `—`
 
-### `CHAR_colosse_silhouette_marche`
-- **Statut** : ⬜ · **Plans** : 30 · **Dérivé de** : `CHAR_colosse_master`
-- **Description canonique** : The colossus walking in profile, distant enough to read as a dark upright silhouette against layered atmospheric haze.
-- **Édition Qwen** — source : `CHAR_colosse_master`
-  ```text
-  Turn the machine to a full side profile in mid-stride, one leg forward.
-  Push it into the far distance so it occupies about one tenth of the frame height, softened by heavy heat haze.
-  ```
-- **Fichier** : `—` · **Seed** : `—`
+### `CHAR_colosse_silhouette_marche` — *retiré*
+- **Statut** : ⛔ retiré du découpage (v0.8)
+- **Motif** : le plan 30 est passé du plan d'ensemble au travelling au buste — la silhouette lointaine de profil n'est plus cadrée.
+- Conservé pour mémoire : ne pas le reproduire sans raison de le réintroduire.
 
 ### `CHAR_colosse_buste_marche`
 - **Statut** : ⬜ · **Plans** : 30 · **Dérivé de** : `CHAR_colosse_master`
@@ -86,17 +81,10 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
   ```
 - **Fichier** : `—` · **Seed** : `—`
 
-### `CHAR_colosse_dos_epaule`
-- **Statut** : ⬜ · **Plans** : 80 · **Dérivé de** : `CHAR_colosse_master`
-- **Rôle** : source de pose pour `FRAME_p80_epaule_oasis` — forme et identité seulement, ni lumière ni décor
-- **Description canonique** : The colossus upper body seen from close behind in three-quarter rear view, its right shoulder and cannon arm nearest the camera, cut off at mid-thigh.
-- **Édition Qwen** — source : `CHAR_colosse_master`
-  ```text
-  Move the camera close behind the machine in a three-quarter rear view, its right shoulder and cannon arm nearest the camera, framing the upper body and cutting off at mid-thigh.
-  Keep a plain neutral background and flat even lighting, with the glowing fissures clearly readable.
-  ```
-- **Note** : le canon doit rester visible. À ce cadrage c'est le marqueur d'identité principal, et c'est le premier détail que le modèle vidéo efface.
-- **Fichier** : `—` · **Seed** : `—`
+### `CHAR_colosse_dos_epaule` — *retiré*
+- **Statut** : ⛔ retiré du découpage (v0.8)
+- **Motif** : le plan 80 n'est plus une amorce d'épaule mais un plan large de seuil.
+- Conservé pour mémoire : ne pas le reproduire sans raison de le réintroduire.
 
 ### `CHAR_colosse_agenouillement`
 - **Statut** : ⬜ · **Plans** : 90 · **Dérivé de** : `CHAR_colosse_master`
@@ -113,13 +101,15 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 # Colosse — détails
 
 ### `CHAR_colosse_pied_contreplongee`
-- **Statut** : ⬜ · **Plans** : 20 · **Dérivé de** : `CHAR_colosse_master`
-- **Description canonique** : The colossus foot and legs in extreme low angle, ankle articulation and underside plating visible, sand packed into the joints.
+- **Statut** : ⬜ · **Plans** : 80, 90 (via les frames) · **Dérivé de** : `CHAR_colosse_master`
+- **Rôle** : référence d'identité — forme et matières seulement, ni sol ni lumière
+- **Description canonique** : The colossus feet and lower legs in extreme low angle, ankle articulation and underside plating visible, sand caked in the joints, fissures glowing through the shin plating.
 - **Édition Qwen** — source : `CHAR_colosse_master`
   ```text
-  Move the camera down to ground level directly beside the machine's foot, looking steeply upward.
-  Frame only the foot and lower legs, filling the frame with strong perspective distortion, ankle articulation and packed sand clearly visible.
+  Move the camera down to ground level beside the machine, looking steeply upward, framing the feet and lower legs with strong perspective distortion and the ankle articulation clearly visible.
+  Keep a plain neutral background with no ground and no horizon, and flat even lighting.
   ```
+- **Note** : réactivé après avoir été retiré au découpage v0.8. Les plans 80 et 90 ne montrent plus le colosse en entier — c'est cette référence qui porte désormais l'échelle. Le tirage existant est réutilisable après retrait du sable.
 - **Fichier** : `—` · **Seed** : `—`
 
 ### `CHAR_colosse_epaule_tete` — *retiré*
@@ -286,16 +276,21 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 - **Note** : le brief précédent listait des contenus — palmiers, bassin, herbes — et produisait une image d'inventaire en lumière plate. Le « wouaw » d'une oasis ne vient pas de la végétation mais de la **lumière** : contre-jour bas, canopée sombre, herbes en liseré, rayons visibles. Le plan doit trancher avec vingt-cinq secondes d'ocre monochrome ; s'il partage la palette du désert, il a échoué même s'il est joli.
 - **Fichier** : `—` · **Seed** : `—`
 
-### `DEC_oasis_depuis_dune`
-- **Statut** : ⬜ · **Plans** : 80 (via `FRAME_p80_epaule_oasis`) · **Dérivé de** : — (génération directe)
-- **Description canonique** : The oasis seen from the crest of a tall dune, a sunlit sand slope running down into dense vegetation below.
+### `DEC_oasis_vue_aerienne`
+- **Statut** : ⬜ · **Plans** : 50 · **Dérivé de** : — (génération directe)
+- **Description canonique** : The oasis seen from high above, straight down — dense palm canopies, wide channels of still water, clearings of grass, running to every edge of the frame with no end in sight, desert sand at one edge only.
 - **Prompt Z-Image** :
   ```text
-  High vantage point looking down at a desert oasis from the crest of a tall dune, photorealistic, cinematic. The near foreground is a smooth sunlit sand slope running down and away from the camera and occupying the lower third of the frame; below and beyond it the oasis opens out as a dense mass of dark palms and bright rim-lit grasses around a pool catching the low sun. Long shadows stretch across the sand from the left. Strong sense of height and distance, the vegetation clearly below the camera, layered haze on the far side.
+  Aerial view looking straight down from high above a vast desert oasis, photorealistic, cinematic. Dense canopies of date palms in saturated green fill the frame, threaded by wide channels of still water that catch the sky in bright mirrored strips, with clearings of tall grass between them. Pale desert sand meets the vegetation along the left edge of the frame only; everywhere else the green runs unbroken to the edges with no end in sight. Late afternoon light rakes in low from the left, cutting long shadows between the palms and igniting the water.
   ```
 - **Réglages** : 1536×864
-- **Note** : **surtout pas un dérivé de `DEC_oasis_large`.** Un modèle d'édition ne déplace pas la caméra : il conserve la géométrie de la source et répond à une demande de recul en collant une dune par-dessus l'image. Un changement de point de vue se génère, il ne s'édite pas.
+- **Note** : le sable au bord gauche est essentiel. Sans point de comparaison, une immensité verte n'est qu'une texture — c'est le désert qui la rend immense.
 - **Fichier** : `—` · **Seed** : `—`
+
+### `DEC_oasis_depuis_dune` — *retiré*
+- **Statut** : ⛔ retiré du découpage (v0.8)
+- **Motif** : le plan 80 est devenu une entrée latérale par la lisière, la vue depuis la dune n'est plus cadrée.
+- Conservé pour mémoire : ne pas le reproduire sans raison de le réintroduire.
 
 ### `DEC_oasis_lisiere`
 - **Statut** : ⬜ · **Plans** : 90, 100 · **Dérivé de** : — (génération directe)
@@ -420,11 +415,12 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 
 ### `FRAME_p30_debut`
 - **Statut** : ⬜ · **Plan** : 30 (première frame)
-- **Sources** : `CHAR_colosse_buste_marche` + `DEC_desert_panoramique`
+- **Sources** : `CHAR_colosse_buste_marche` + `DEC_desert_panoramique` + `DEBRIS_carcasse_horizon`
 - **Édition Qwen (multi-image)**
   ```text
   Place the machine walking in profile toward the right of the frame, framed at chest height and seen slightly from below, its plating filling most of the image with the cannon arm swinging at its right side and the fissures glowing.
-  Keep the dune field and hazy horizon sliding past behind it, lit by hard raking sunlight from the right.
+  Place the broken hull far away in the background haze behind it, small and motionless.
+  Keep the dune field and hazy horizon sliding past, lit by hard raking sunlight from the right.
   ```
 - **Fichier** : `—` · **Seed** : `—`
 
@@ -461,14 +457,71 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 - **Note** : le colosse doit rester **hors centre, à gauche, et flou**. C'est ce que le modèle ne ferait jamais spontanément, et c'est tout le sens du plan : il n'est plus le sujet, l'oasis l'est. Le sens compte — tout va vers la droite depuis le plan 30.
 - **Fichier** : `—` · **Seed** : `—`
 
-### `FRAME_p80_epaule_oasis`
-- **Statut** : ⬜ · **Plan** : 80
-- **Sources** : `CHAR_colosse_dos_epaule` + `DEC_oasis_depuis_dune`
+### `FRAME_p50_aerien`
+- **Statut** : ⬜ · **Plan** : 50 (première frame)
+- **Sources** : `DEC_oasis_vue_aerienne` + `PROP_oiseaux_vol`
 - **Édition Qwen (multi-image)**
   ```text
-  Place the machine's back, right shoulder and cannon arm large in the left foreground, cut off by the left and bottom frame edges, with the dune slope and the oasis opening out behind it.
-  Light the upper edges of the plating with warm sunlight and let cool green bounce up from the oasis below, keeping the fissures burning through the metal.
+  Place the flock of birds flying over the oasis seen from directly above, small against the canopies below, with their shadows falling on the palms.
+  Keep the overhead view, the desert sand along the left edge and the low raking light unchanged.
   ```
+- **Fichier** : `—` · **Seed** : `—`
+
+### `FRAME_p70_fin`
+- **Statut** : ⬜ · **Plan** : 70 (dernière frame)
+- **Sources** : `FRAME_p40_fin` + `CHAR_colosse_buste_marche`
+- **Édition Qwen (multi-image)**
+  ```text
+  Bring the machine into sharp focus and move it further into the frame, mid-stride and walking toward the right, its head still turned toward the distant green patch.
+  Keep the camera position, the horizon and the small green patch exactly as in the first image.
+  ```
+- **Note** : dérive de la dernière frame du plan 40. C'est ce qui garantit qu'on reprend exactement là où on l'avait laissé.
+- **Fichier** : `—` · **Seed** : `—`
+
+### `FRAME_p80_debut`
+- **Statut** : ⬜ · **Plan** : 80 (première frame)
+- **Sources** : `DEC_oasis_lisiere`
+- **Édition Qwen**
+  ```text
+  Lower the camera close to the ground on the sand side, looking slightly upward, so the grass line sits high in the frame and the palms rise above it against the sky.
+  Leave the frame completely empty of any figure.
+  ```
+- **Note** : caméra basse, à hauteur d'un homme debout. C'est cette hauteur qui rendra les pieds énormes au plan suivant.
+- **Fichier** : `—` · **Seed** : `—`
+
+### `FRAME_p80_fin`
+- **Statut** : ⬜ · **Plan** : 80 (dernière frame)
+- **Sources** : `FRAME_p80_debut` + `CHAR_colosse_pied_contreplongee`
+- **Édition Qwen (multi-image)**
+  ```text
+  Place two enormous armoured feet standing side by side at the edge of the thick grass, filling the lower half of the frame, the legs rising out of the top of the frame so the body is never visible.
+  Add deep footprints in the sand behind them coming from the left, and sand pushed up around the soles.
+  Keep the camera position, the grass line, the palms and the backlight exactly as in the first image.
+  ```
+- **Note** : **le corps ne doit jamais entrer dans le cadre.** Les jambes sortent par le haut. Rejeter tout tirage où l'on devine le torse : c'est tout l'enjeu du plan.
+- **Fichier** : `—` · **Seed** : `—`
+
+### `FRAME_p90_debut`
+- **Statut** : ⬜ · **Plan** : 90 (première frame)
+- **Sources** : `FRAME_p80_fin`
+- **Édition Qwen**
+  ```text
+  Move the camera lower and closer to the feet, and turn it to a side view so one leg is nearer the camera than the other, keeping the grass line and the palms behind.
+  Keep the same lighting and the same time of day, and keep the body out of the frame above.
+  ```
+- **Note** : ce n'est plus un raccord dans l'axe mais un changement de place — un resserrement sur des pieds ne donnerait que des pieds. Même lieu, même lumière, caméra déplacée.
+- **Fichier** : `—` · **Seed** : `—`
+
+### `FRAME_p90_fin`
+- **Statut** : ⬜ · **Plan** : 90 (dernière frame)
+- **Sources** : `FRAME_p90_debut` + `CHAR_colosse_agenouillement`
+- **Édition Qwen (multi-image)**
+  ```text
+  Put the machine on one knee so that its knee, its closed left fist on the ground and its lowered head all come down into the frame from above, the head turned down toward its own hand.
+  Keep the cannon arm hanging at its side without touching the ground.
+  Keep the camera position, the grass line and the lighting exactly as in the first image.
+  ```
+- **Note** : c'est l'image du film. Il était trop grand pour tenir dans le cadre ; il y entre en pliant le genou.
 - **Fichier** : `—` · **Seed** : `—`
 
 ### `PROP_oiseau_proche`

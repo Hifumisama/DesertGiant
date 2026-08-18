@@ -1,9 +1,9 @@
 # FICHE DE PLAN — Le Colosse et l'Oasis
 
 > Source : `SCENARIO.md` (découpage v0.3) · Modèle : **MiniMax H3** · **24 fps**
-> 11 plans · **63 s de montage** · **69 s à générer**
+> 12 plans · **71 s de montage** · **74 s à générer**
 > 35 assets à produire, dont 2 critiques — voir `REGISTRE_ASSETS_colosse.md`
-> 6 plans en ancrage frame (10, 20, 40 en FL2VA ; 70, 80 en I2VA) · 5 en référence de sujet
+> 9 plans en ancrage frame (10, 20, 30, 40, 70, 80, 90 en FL2VA ; 50, 60 en I2VA) · 3 en référence de sujet
 
 ---
 
@@ -172,104 +172,127 @@ FL2VA pour deux raisons cumulées. La première frame doit raccorder au volet du
 ---
 
 
-## PLAN 50 — *Le regard*
+## PLAN 50 — *À vol d'oiseau*
 
 | Durée montage | Durée génération | FPS | Mode |
 |---|---|---|---|
-| 6 s | 6 s | 24 | full-reference |
-
-**Références (3/4)**
-
-| Label | Asset | Rôle dans le plan |
-|---|---|---|
-| `<Picture 1>` | `CHAR_colosse_buste_arret` | Buste et tête, pose d'arrêt |
-| `<Picture 2>` | `CHAR_colosse_master` | Cohérence : bras droit réparé, textures |
-| `<Picture 3>` | `DEC_desert_horizon_oasis` | Horizon désertique avec la tache verte lointaine |
-
-**Prompt**
-
-```text
-subject_definitions:
-<Subject 1> is the colossus in <Picture 1> and <Picture 2>, an enormous humanoid war machine; <Picture 1> establishes its chest and head in a halted stance and <Picture 2> establishes its overall build, worn plating, glowing orange fissures and a right arm ending in a scavenged cannon.
-<Subject 2> is the desert horizon in <Picture 3>, a line of low dunes meeting a bright backlit sky, with a small green patch trembling in the heat far away.
-
-summary:
-[reference generation] The target video is a single six-second locked shot in which <Subject 1> stands motionless, already halted, sand still pouring from its shoulders, its head held toward the distant green patch of <Subject 2>.
-
-retention_analysis:
-<Subject 1> (appears in [Shot 1]): fully_preserved - the chest and head structure, worn plating, glowing fissures and cannon arm are retained.
-<Subject 2> (appears in [Shot 1]): fully_preserved - the horizon line, backlit sky and distant green patch are retained.
-
-detailed_description:
-The target video is cinematic, live-action and photorealistic, strongly backlit, with a warm desaturated palette and heavy atmospheric haze.
-[Shot 1] A chest-height shot frames <Subject 1> from the side against the bright sky, its head and shoulders rimmed by hard backlight, the cannon on its right arm hanging at its side and its fissures glowing steadily through the plating. The machine is already at a standstill and stays motionless for the whole shot. Fine dust and sand continue to pour from its shoulder plates in long thin streams that drift downward through the backlight and thin out toward the end. Its head is held turned away from its direction of travel, and it does not move. Behind it, <Subject 2> stretches out in soft focus, layered dunes under a bright hazy sky with a small green patch shimmering far away on the horizon. The camera holds a completely static shot for the entire duration. Only the falling sand, the heat shimmer and the faint pulsing of the fissures move in the frame. The composition is unchanged from first to last frame.
-
-overall_soundscape:
-Heavy servo movement cuts off sharply at the start, leaving a metallic settling creak. Sand streams off the shoulders in a soft continuous hiss that thins out as the pan continues, then wind alone, and beneath it, extremely faint and far away, a trace of moving water.
-
-non_diegetic_music:
-N/A
-```
-
-**Notes** — le plan a changé de fonction. Il révélait l'oasis ; le plan 40 s'en charge désormais. Il devient l'**après** de la découverte : un temps de contemplation entre la révélation et l'oasis, où il ne se passe rien d'autre que du sable qui tombe.
-
-C'est le plan le plus immobile du film, et c'est délibéré. Après un travelling, un passage au-dessus de la caméra et un relais de regard, six secondes sans mouvement pèsent leur poids. La caméra est fixe, le sujet est fixe, seule la matière bouge.
-
----
-
-## PLAN 70 — *L'oasis*
-
-| Durée montage | Durée génération | FPS | Mode |
-|---|---|---|---|
-| 5 s | 5 s | 24 | **I2VA** |
+| **7 s** | **7 s** | 24 | **I2VA** (ancrage frame) |
 
 **Références (1/4)**
 
 | Label | Asset | Rôle dans le plan |
 |---|---|---|
-| `<Picture 1>` | `DEC_oasis_large` | **Première frame exacte** du plan |
+| `<Picture 1>` | `FRAME_p50_aerien` | **Première frame exacte** — vue de dessus, les oiseaux au-dessus de l'oasis |
 
 **Prompt**
 
 ```text
 For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, the wide shot opens exactly on the oasis established in <Picture 1>, preserving the arrangement of palms, fruit trees, tall grasses, the clear pool and the surrounding light. The palette inverts from the surrounding desert into saturated cool greens with warm shadows, and sunlight filters through the canopy in shifting patches across the water and the grass. The camera holds a completely static shot for the entire duration. Fronds and leaves move gently in a light wind, tall grasses bend and recover along the water's edge, and slow ripples cross the surface of the pool, breaking the reflected canopy into moving fragments. Two birds descend into the frame from the upper right and settle on a low branch above the water, and a third lands at the pool edge and dips its head. No metal, machinery or debris appears anywhere in the frame. The composition established in <Picture 1> is held unchanged from first to last frame.
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, the shot opens exactly on the overhead framing of <Picture 1>, looking straight down from high above at the flock of migrating birds flying over the edge of a vast oasis, the desert sand still visible at the left of the frame and the first palm canopies below the birds. The camera flies forward with the flock at moderate speed in one continuous unbroken movement, holding them in the same part of the frame while the ground streams past beneath. The oasis opens out and keeps opening: dense canopies of date palms in saturated green, wide channels of still water threading between them and catching the sky in bright mirrored strips, clearings of tall grass, more water further on, the vegetation running to the edges of the frame in every direction with no end in sight. The birds' shadows travel across the canopies below them. Late afternoon light rakes in low from the left, cutting long shadows between the palms and igniting the water. The frame stays locked straight down for the whole shot, and the shot ends still moving forward over unbroken green.
 
-overall_soundscape: Water moves continuously against the pool edge with a soft irregular lapping, and dense birdsong overlaps from several directions in the canopy. Leaves and fronds rustle steadily in the wind, and brief wingbeats cut through as birds land.
+overall_soundscape: Wind moves steadily past the microphone at altitude, layered with continuous wingbeats close by. Bird calls carry across the flock, overlapping and answering each other. Far below and muffled by distance, water and dense birdsong rise from the canopy, growing fuller as the flight continues.
 
 non_diegetic_music: N/A
 ```
 
-**Notes** — seul plan en mode base de la fiche. La plate d'oasis fait un excellent premier frame : la composition est fixe et validée d'avance, autant l'imposer plutôt que de la décrire. Les oiseaux et la végétation sont dans la plate, aucun asset supplémentaire nécessaire.
+**Notes** — le plan qui donne son échelle à l'oasis. Le désert visible au bord gauche de la première frame est délibéré : sans ce point de comparaison, une immensité verte n'est qu'une texture. On voit qu'on vient de quitter le sable.
+
+Le mouvement doit continuer jusqu'au dernier photogramme, sans jamais découvrir la fin de l'oasis. C'est ce qui la rend immense — un plan qui s'arrête sur une lisière la rend simplement grande.
 
 ---
 
-## PLAN 80 — *La reprise*
+## PLAN 60 — *L'arrivée des oiseaux*
 
 | Durée montage | Durée génération | FPS | Mode |
 |---|---|---|---|
-| 4 s | **5 s** | 24 | **I2VA** (ancrage frame) |
+| **5 s** | **5 s** | 24 | **I2VA** (ancrage frame) |
 
 **Références (1/4)**
 
 | Label | Asset | Rôle dans le plan |
 |---|---|---|
-| `<Picture 1>` | `FRAME_p80_epaule_oasis` | **Première frame exacte** — amorce d'épaule et canon, oasis derrière |
+| `<Picture 1>` | `DEC_oasis_large` | **Première frame exacte** — l'oasis à hauteur d'homme |
 
 **Prompt**
 
 ```text
 For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
 
-integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, the shot opens exactly on the composition established in <Picture 1>, the machine's back, right shoulder and cannon arm filling the left foreground and cut by the frame edge, the dune slope running down into the palms and grasses of the oasis behind. Warm sunlight catches the upper edges of the plating while cool green light bounces up from below, and the fissures burn steadily through the metal. The camera holds a completely static shot for the entire duration. After a beat the machine begins to walk again: the shoulder rises, rotates forward and drops heavily as the first step lands, and the whole mass descends so that the shoulder and the cannon pass partially out of the bottom of the frame, progressively uncovering the oasis behind. Loose sand slides down the slope in sheets where the foot has pressed. The shot ends with the shoulder low against the bottom edge and the green fully open in the background.
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, the shot opens exactly on the oasis established in <Picture 1>, preserving the arrangement of palms, the still pool, the tall grasses and the low sun raking through the dark canopy. The camera holds a completely static shot for the entire duration. Fronds and leaves move gently in a light wind, tall grasses bend and recover along the water's edge, and slow ripples cross the surface of the pool, breaking the reflected canopy into moving fragments. The migrating birds descend into the frame from the upper left, banking as they slow, and settle one after another: two onto a low branch above the water, one at the pool edge where it dips its head and drinks, others further back among the grasses. Their wingbeats stop. By the end of the shot every bird has landed and the frame is still except for the water, the leaves and the light. No metal, machinery or debris appears anywhere in the frame.
 
-overall_soundscape: Servo motors restart with a low rising whine and settle into a heavy working rhythm. A single deep footfall lands closer and louder than in earlier shots, followed by sand sliding down the dune face in a long dry rush, with faint birdsong carrying up from below.
+overall_soundscape: Wingbeats fill the opening of the shot and stop one by one as the birds settle. Water moves continuously against the pool edge with a soft irregular lapping, and dense birdsong overlaps from several directions in the canopy. Leaves and fronds rustle steadily in the wind. The shot ends with no wingbeats left, only water, wind and song.
 
 non_diegetic_music: N/A
 ```
 
-**Notes** — bascule en ancrage frame. L'amorce d'épaule coupée par le bord du cadre est exactement le cadrage partiel que le modèle refuse de tenir en référence de sujet. L'identité ne se perd pas pour autant : une première frame *est* l'identité, et cinq secondes de caméra fixe ne laissent pas le temps de dériver. Durée générée à 5 s, couper 1 s en entrée.
+**Notes** — les oiseaux se posent, et leur fonction s'achève : ils ont montré le chemin, ils sortent du récit. Le silence de leurs ailes à la fin du plan est ce qui referme le mouvement et laisse la place à la machine.
+
+C'est aussi le seul plan du film à hauteur d'homme, sans échelle monumentale. Il vaut par contraste avec les six secondes de vol qui précèdent.
+
+---
+
+## PLAN 70 — *La reprise*
+
+| Durée montage | Durée génération | FPS | Mode |
+|---|---|---|---|
+| **5 s** | **5 s** | 24 | **FL2VA** (ancrage première et dernière frame) |
+
+**Références (2/4)**
+
+| Label | Asset | Rôle dans le plan |
+|---|---|---|
+| `<Picture 1>` | `FRAME_p40_fin` | **Première frame** — reprise exacte de la fin du plan 40 |
+| `<Picture 2>` | `FRAME_p70_fin` | **Dernière frame** — le colosse s'est remis en marche vers l'oasis |
+
+**Prompt**
+
+```text
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 5.00-second mark of the target video.
+
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in hard raking sunlight with heavy atmospheric haze. The shot opens exactly on <Picture 1>, the enormous machine halted at the left edge of the frame and out of focus, its head turned right toward the horizon where a small green patch shimmers in the heat, the last streams of sand still falling from its shoulders. The camera holds still. The machine stays motionless for the first seconds. Then the focus racks forward off the horizon and onto it, bringing the corroded plating, the glowing fissures and the scavenged cannon into sharp detail. Its body shifts, weight transfers, and it begins to walk again toward the right of frame, one heavy stride and then another, moving into the frame rather than out of it, its head still held toward the distant green. The shot ends exactly on <Picture 2>, the machine mid-stride and further into the frame, walking toward the oasis.
+
+overall_soundscape: The shot opens on wind, the last of the sand hissing off the shoulder plates, and very faint water far away. Servo motors restart with a low rising whine and settle into a heavy working rhythm, and two deep footfalls land in the final seconds, each followed by a broad rush of displaced sand.
+
+non_diegetic_music: N/A
+```
+
+**Notes** — la première frame est celle du plan 40, reprise à l'identique. On revient exactement là où on l'avait laissé, ce qui transforme les plans 50 et 60 en un *pendant ce temps* : il n'a pas bougé, les oiseaux sont arrivés avant lui.
+
+La bascule de mise au point inverse celle du plan 40. Là-bas, l'oiseau prenait le point et le colosse le perdait ; ici il le récupère. C'est ce qui signale qu'il redevient le sujet du film.
+
+---
+
+## PLAN 80 — *L'entrée*
+
+| Durée montage | Durée génération | FPS | Mode |
+|---|---|---|---|
+| **6 s** | **6 s** | 24 | **FL2VA** (ancrage première et dernière frame) |
+
+**Références (2/4)**
+
+| Label | Asset | Rôle dans le plan |
+|---|---|---|
+| `<Picture 1>` | `FRAME_p80_debut` | **Première frame** — la lisière de l'oasis, vide |
+| `<Picture 2>` | `FRAME_p80_fin` | **Dernière frame** — deux pieds énormes arrêtés à la lisière |
+
+**Prompt**
+
+```text
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 6.00-second mark of the target video.
+
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in warm backlight from behind the oasis with cool green fill from the front. The shot opens exactly on <Picture 1>, a low camera set close to the ground on the sand side of the oasis edge, looking slightly upward: bare rippled sand across the near ground, a sharp irregular line high in the frame where it gives way to thick tall grass, and date palms rising above it into a bright hazy sky. The frame is empty of any figure. The camera holds a completely static shot for the entire duration. A shadow sweeps in from the left across the sand, and the ground shakes, sand jumping on the surface. An enormous armoured foot enters from the left and lands heavily in the near ground, filling the lower left of the frame and pushing a ridge of sand up around its sole; only the foot and the lower leg are in frame, the leg rising out of the top of the frame so the body is never visible. A second foot swings through and lands beyond it, then a third stride, the two legs advancing toward the grass line while the whole frame trembles at each impact. The strides shorten and stop with both feet planted side by side at the edge of the thick grass. Dust drifts down from above into the frame and settles. The palms move gently behind. The shot ends exactly on <Picture 2>, the two feet still at the boundary and the body entirely out of frame.
+
+overall_soundscape: The shot opens on birdsong, moving water and leaves in the wind, close and full. Heavy footfalls approach from the left, each impact deep and muffled by sand, growing louder and closer together, with servo motors working under load between them. The machinery cuts off with a long metallic settling creak, and the oasis sounds are left alone in the final seconds.
+
+non_diegetic_music: N/A
+```
+
+**Notes** — plan de transition, et plan de seuil. Le cadre est d'abord celui de l'oasis seule ; c'est la machine qui vient s'y inscrire, pas l'inverse. Son ombre entre avant elle.
+
+**On ne voit que ses pieds.** Le corps ne rentre jamais dans le cadre, et c'est ce qui porte son échelle : une machine qu'on ne peut pas cadrer est plus grande qu'une machine qu'on cadre en entier. Le cadrage partiel était impossible en référence de sujet — le modèle recomposait pour montrer le sujet — mais les deux frames le lui imposent.
+
+Il entre par la gauche et va vers la droite, comme depuis le plan 30. La direction tient sur toute la traversée.
 
 ---
 
@@ -277,44 +300,37 @@ non_diegetic_music: N/A
 
 | Durée montage | Durée génération | FPS | Mode |
 |---|---|---|---|
-| 6 s | 6 s | 24 | full-reference |
+| **6 s** | **6 s** | 24 | **FL2VA** (ancrage première et dernière frame) |
 
-**Références (3/4)**
+**Références (2/4)**
 
 | Label | Asset | Rôle dans le plan |
 |---|---|---|
-| `<Picture 1>` | `CHAR_colosse_agenouillement` | Pose d'agenouillement, de profil |
-| `<Picture 2>` | `DEC_oasis_lisiere` | Lisière de l'oasis, sable puis herbe |
-| `<Picture 3>` | `CHAR_colosse_master` | Cohérence : silhouette debout, bras réparé |
+| `<Picture 1>` | `FRAME_p90_debut` | **Première frame** — caméra basse, ses jambes seules |
+| `<Picture 2>` | `FRAME_p90_fin` | **Dernière frame** — à genoux, main gauche au sol |
 
 **Prompt**
 
 ```text
-subject_definitions:
-<Subject 1> is the colossus in <Picture 1> and <Picture 3>, an enormous humanoid war machine; <Picture 1> establishes its kneeling posture in profile, left fist on the ground and cannon arm at its side and <Picture 3> establishes its standing build, worn plating, glowing orange fissures and a right arm ending in a scavenged cannon.
-<Subject 2> is the oasis edge in <Picture 2>, a boundary where open sand gives way to thick green grass, with palms rising behind it.
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 6.00-second mark of the target video.
 
-summary:
-[reference generation] The target video is a single six-second lateral shot in which <Subject 1> halts before <Subject 2>, holds still, then lowers onto one knee and sets its closed left hand on the ground.
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in warm backlight from behind with cool green fill from the front. The shot opens exactly on <Picture 1>, a low camera near the ground beside the oasis edge in a side view, framing only the machine's legs standing at the grass line, one leg nearer the camera than the other, the corroded plating and glowing fissures filling much of the frame and the body rising out of shot above. The camera holds a completely static shot for the entire duration. The legs stay entirely motionless for about two seconds, with only fine dust drifting down through the frame and the grass moving in front of them. Then the descent begins: the near leg bends and the whole mass lowers slowly and very heavily, plating grinding against plating as the weight transfers. The knee comes down into the frame and meets the ground, driving sand outward in a low ring. The closed left fist follows it down and settles on the ground, and the lowered head descends into the top of the frame, turned down toward its own hand. The cannon arm comes down at its side and stops short of the ground, never touching it. The machine holds this kneeling position as the last dust settles, its head, hand and knee now all inside the frame. The shot ends exactly on <Picture 2>.
 
-retention_analysis:
-<Subject 1> (appears in [Shot 1]): fully_preserved - the full-body structure, kneeling posture, worn plating, glowing fissures and cannon arm are retained.
-<Subject 2> (appears in [Shot 1]): fully_preserved - the sand-to-grass boundary and the palms behind it are retained.
+overall_soundscape: The shot opens into near silence with only wind, birdsong and settling dust. A long structural creak builds as the body lowers, metal grinding slowly under load, then one heavy muffled impact as the knee lands and a second as the hand meets the ground, each followed by a soft rush of displaced sand. Birdsong continues quietly from the oasis throughout.
 
-detailed_description:
-The target video is cinematic, live-action and photorealistic, in mixed light with warm backlight behind and cool green fill from the front.
-[Shot 1] A wide lateral shot, framed from slightly below, holds <Subject 1> in full figure in profile, standing at the edge of <Subject 2> where sand meets thick grass; warm light rims its back while green bounce fills its front plating and the cannon on its right arm hangs at its side. The camera holds a completely static shot for the entire duration. The machine stops dead and stays entirely motionless for about two seconds, with only fine dust drifting from its joints. Then the descent begins: the right leg bends and the body lowers slowly and very heavily onto one knee, the movement continuous and weighted, plating shifting against plating as the mass transfers. The knee meets the ground and drives sand outward in a low ring. Its left hand, held closed, comes down and settles onto the ground in front of the body, while the cannon arm stays lowered at its side and never touches the ground. The machine holds this final kneeling position, head lowered toward its own closed left hand, as the last dust settles.
-
-overall_soundscape:
-The shot opens into near silence with only faint wind and settling dust. A long structural creak builds as the body lowers, metal grinding slowly under load, then one heavy muffled impact as the hand meets the ground, followed by a soft rush of displaced sand. Birdsong continues quietly from the oasis behind.
-
-non_diegetic_music:
-N/A
+non_diegetic_music: N/A
 ```
 
-**Notes** — les 2 s d'immobilité initiale sont explicitement chiffrées dans le prompt : c'est le battement que le scénario interdit de raccourcir, et un modèle vidéo comble le vide s'il n'est pas décrit. Générer en 6 s natifs, sans passer par un ralenti.
+**Notes** — le raccord dans l'axe est abandonné : resserrer sur des pieds ne donne que des pieds. C'est un changement de place — même lieu, même lumière, caméra abaissée et rapprochée.
+
+**Il entre dans le cadre en s'agenouillant.** Trop grand pour y tenir debout, il n'y devient visible qu'en pliant le genou. Le plan raconte donc exactement ce que raconte le film, sans qu'on ait jamais eu à le montrer en entier.
+
+Les deux secondes d'immobilité initiale sont chiffrées dans le prompt. C'est le battement que le scénario interdit de raccourcir, et un modèle vidéo comble le vide s'il n'est pas décrit.
+
+Le canon ne touche jamais le sol. C'est le geste du film : le bras qu'il s'est fabriqué avec les morts reste en bas, l'autre s'ouvre.
 
 ---
+
 
 ## PLAN 100 — *Les doigts*
 
