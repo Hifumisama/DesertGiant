@@ -263,7 +263,7 @@ La bascule de mise au point inverse celle du plan 40. Là-bas, l'oiseau prenait 
 
 ---
 
-## PLAN 80 — *L'entrée*
+## PLAN 80 — *Les pieds dans l'eau*
 
 | Durée montage | Durée génération | FPS | Mode |
 |---|---|---|---|
@@ -273,15 +273,15 @@ La bascule de mise au point inverse celle du plan 40. Là-bas, l'oiseau prenait 
 
 | Label | Asset | Rôle dans le plan |
 |---|---|---|
-| `<Picture 1>` | `FRAME_p80_debut` | **Première frame** — la lisière de l'oasis, vide |
-| `<Picture 2>` | `FRAME_p80_fin` | **Dernière frame** — deux pieds énormes arrêtés à la lisière |
+| `<Picture 1>` | `FRAME_p80_debut` | **Première frame** — le colosse en entier, au loin, de l'autre côté du bassin |
+| `<Picture 2>` | `FRAME_p80_fin` | **Dernière frame** — ses pieds dans l'eau, le corps hors cadre |
 
 **Prompt**
 
 ```text
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 6.00-second mark of the target video.
 
-integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in warm backlight from behind the oasis with cool green fill from the front. The shot opens exactly on <Picture 1>, a low camera set close to the ground on the sand side of the oasis edge, looking slightly upward: bare rippled sand across the near ground, a sharp irregular line high in the frame where it gives way to thick tall grass, and date palms rising above it into a bright hazy sky. The frame is empty of any figure. The camera holds a completely static shot for the entire duration. A shadow sweeps in from the left across the sand, and the ground shakes, sand jumping on the surface. An enormous armoured foot enters from the left and lands heavily in the near ground, filling the lower left of the frame and pushing a ridge of sand up around its sole; only the foot and the lower leg are in frame, the leg rising out of the top of the frame so the body is never visible. A second foot swings through and lands beyond it, then a third stride, the two legs advancing toward the grass line while the whole frame trembles at each impact. The strides shorten and stop with both feet planted side by side at the edge of the thick grass. Dust drifts down from above into the frame and settles. The palms move gently behind. The shot ends exactly on <Picture 2>, the two feet still at the boundary and the body entirely out of frame.
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in low warm backlight raking through the palms. The shot opens exactly on <Picture 1>, a camera set very low at the surface of the oasis pool, looking slightly upward across the water: still water filling the lower half of the frame and reflecting the canopy, palms rising on both sides, and beyond the far bank a dune against the sky. The enormous machine stands in the far distance across the water, small enough to be seen in full figure, its cannon arm at its right side and its fissures glowing. The camera holds a completely static shot for the entire duration. The machine walks straight toward the camera with slow heavy strides, growing rapidly in frame; the water shakes and rings spread outward at every footfall before it even reaches the bank. Its head passes out of the top of the frame, then its chest, then its knees, until only the lower legs and feet remain in shot, the body no longer containable by the frame. It steps down into the pool, each foot breaking the surface and throwing white water outward in heavy sheets, and wades two strides forward. The strides shorten and stop, both feet planted flat and side by side in the shallows, water swirling and settling around the submerged soles. Ripples spread away toward the camera and the palms move gently behind. The shot ends exactly on <Picture 2>, the two feet standing in the water and the body entirely out of frame.
 
 overall_soundscape: The shot opens on birdsong, moving water and leaves in the wind, close and full. Heavy footfalls approach from the left, each impact deep and muffled by sand, growing louder and closer together, with servo motors working under load between them. The machinery cuts off with a long metallic settling creak, and the oasis sounds are left alone in the final seconds.
 
@@ -290,7 +290,9 @@ non_diegetic_music: N/A
 
 **Notes** — plan de transition, et plan de seuil. Le cadre est d'abord celui de l'oasis seule ; c'est la machine qui vient s'y inscrire, pas l'inverse. Son ombre entre avant elle.
 
-**On ne voit que ses pieds.** Le corps ne rentre jamais dans le cadre, et c'est ce qui porte son échelle : une machine qu'on ne peut pas cadrer est plus grande qu'une machine qu'on cadre en entier. Le cadrage partiel était impossible en référence de sujet — le modèle recomposait pour montrer le sujet — mais les deux frames le lui imposent.
+**Le plan contient sa propre progression d'échelle.** Il s'ouvre sur un colosse entier, visible et mesurable au fond du cadre ; il se ferme sur un colosse que le cadre ne peut plus contenir. C'est le passage qui porte l'effet, pas le cadrage partiel seul — et il ne tient que parce que les deux frames verrouillent les deux extrémités.
+
+**Il entre dans l'eau.** Il est venu en chercher : le voir y poser le pied est l'aboutissement de la marche commencée au plan 10. L'arrivée frontale ne rompt pas la direction, le frontal étant neutre, comme au plan 20.
 
 Il entre par la gauche et va vers la droite, comme depuis le plan 30. La direction tient sur toute la traversée.
 
@@ -306,7 +308,7 @@ Il entre par la gauche et va vers la droite, comme depuis le plan 30. La directi
 
 | Label | Asset | Rôle dans le plan |
 |---|---|---|
-| `<Picture 1>` | `FRAME_p90_debut` | **Première frame** — caméra basse, ses jambes seules |
+| `<Picture 1>` | `FRAME_p90_debut` | **Première frame** — caméra basse sur l'eau, ses jambes seules |
 | `<Picture 2>` | `FRAME_p90_fin` | **Dernière frame** — à genoux, main gauche au sol |
 
 **Prompt**
@@ -314,9 +316,9 @@ Il entre par la gauche et va vers la droite, comme depuis le plan 30. La directi
 ```text
 How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 6.00-second mark of the target video.
 
-integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in warm backlight from behind with cool green fill from the front. The shot opens exactly on <Picture 1>, a low camera near the ground beside the oasis edge in a side view, framing only the machine's legs standing at the grass line, one leg nearer the camera than the other, the corroded plating and glowing fissures filling much of the frame and the body rising out of shot above. The camera holds a completely static shot for the entire duration. The legs stay entirely motionless for about two seconds, with only fine dust drifting down through the frame and the grass moving in front of them. Then the descent begins: the near leg bends and the whole mass lowers slowly and very heavily, plating grinding against plating as the weight transfers. The knee comes down into the frame and meets the ground, driving sand outward in a low ring. The closed left fist follows it down and settles on the ground, and the lowered head descends into the top of the frame, turned down toward its own hand. The cannon arm comes down at its side and stops short of the ground, never touching it. The machine holds this kneeling position as the last dust settles, its head, hand and knee now all inside the frame. The shot ends exactly on <Picture 2>.
+integrated_multimodal_description: [Shot 1] Cinematic, live-action and photorealistic, in warm backlight from behind with cool green fill from the front. The shot opens exactly on <Picture 1>, a low camera at the surface of the oasis pool in a side view, framing only the machine's legs standing in the shallows, one leg nearer the camera than the other, water swirling around the submerged feet, the corroded plating and glowing fissures filling much of the frame and the body rising out of shot above. The camera holds a completely static shot for the entire duration. The legs stay entirely motionless for about two seconds, with only fine dust drifting down through the frame and the water settling around the feet. Then the descent begins: the near leg bends and the whole mass lowers slowly and very heavily, plating grinding against plating as the weight transfers. The knee comes down into the frame and breaks the surface of the pool, driving a wide ring of white water outward. The closed left fist follows it down and settles just above the water, and the lowered head descends into the top of the frame, turned down toward its own hand. The cannon arm comes down at its side and stops short of the water, never touching it. The machine holds this kneeling position as the last dust settles, its head, hand and knee now all inside the frame. The shot ends exactly on <Picture 2>.
 
-overall_soundscape: The shot opens into near silence with only wind, birdsong and settling dust. A long structural creak builds as the body lowers, metal grinding slowly under load, then one heavy muffled impact as the knee lands and a second as the hand meets the ground, each followed by a soft rush of displaced sand. Birdsong continues quietly from the oasis throughout.
+overall_soundscape: The shot opens into near silence with only wind, birdsong and settling dust. A long structural creak builds as the body lowers, metal grinding slowly under load, then a heavy muffled impact as the knee breaks the surface, followed by a broad surge of displaced water and the long slap of the wave reaching the bank. Birdsong continues quietly from the oasis throughout.
 
 non_diegetic_music: N/A
 ```
@@ -351,18 +353,18 @@ Le canon ne touche jamais le sol. C'est le geste du film : le bras qu'il s'est f
 ```text
 subject_definitions:
 <Subject 1> is the colossus hand in <Picture 1> and <Picture 2>; <Picture 1> establishes its five enormous left-hand fingers, their segmented plating and worn joints, and <Picture 2> establishes the machine's overall metal surface, rust tone and panel scale.
-<Subject 2> is the ground in <Picture 3>, grass and sand at the oasis edge, present only as soft out-of-focus texture.
+<Subject 2> is the water in <Picture 3>, the surface of the oasis pool, present only as soft out-of-focus texture and moving highlights.
 
 summary:
 [reference generation] The target video is a single close shot of the five fingers of <Subject 1> opening very slowly above <Subject 2>, with warm light escaping from within and the contents never revealed.
 
 retention_analysis:
 <Subject 1> (appears in [Shot 1]): fully_preserved - the finger structure, segmented plating, worn joints and rust tone are retained.
-<Subject 2> (appears in [Shot 1]): weak_reference - only the general colour and texture of grass and sand are retained, held far out of focus.
+<Subject 2> (appears in [Shot 1]): weak_reference - only the general colour and movement of the water surface are retained, held far out of focus.
 
 detailed_description:
 The target video is cinematic, live-action and photorealistic, with a very shallow depth of field and a warm, soft key light.
-[Shot 1] A close shot frames only the five fingers of <Subject 1>, filling the frame from edge to edge, their segmented plating and pitted rust rendered in sharp detail while <Subject 2> sits far behind them as a soft wash of green and sand tones, completely out of focus. The camera holds a completely static shot for the entire duration. The fingers begin to spread apart very slowly in one continuous movement, the joints rotating a fraction at a time, plating sliding against plating and fine grit falling from the seams. As the gap between the fingers widens, a warm soft light escapes from inside and grows across the inner surfaces of the metal, catching the worn edges and the rust. The framing stays tight on the fingers throughout and never widens, and the interior of the hand remains outside the frame, so that what the fingers hold is never visible. The movement continues to the final frame without completing.
+[Shot 1] A close shot frames only the five fingers of <Subject 1>, filling the frame from edge to edge, their segmented plating and pitted rust rendered in sharp detail while <Subject 2> sits far behind them as a soft wash of green and water reflections, completely out of focus, moving highlights drifting across it. The camera holds a completely static shot for the entire duration. The fingers begin to spread apart very slowly in one continuous movement, the joints rotating a fraction at a time, plating sliding against plating and fine grit falling from the seams. As the gap between the fingers widens, a warm soft light escapes from inside and grows across the inner surfaces of the metal, catching the worn edges and the rust. The framing stays tight on the fingers throughout and never widens, and the interior of the hand remains outside the frame, so that what the fingers hold is never visible. The movement continues to the final frame without completing.
 
 overall_soundscape:
 A single continuous metallic creak runs through the entire shot, thin and very slow, the sound of large plates rotating under their own weight. Grains of grit fall from the joints in brief scattered ticks, with quiet birdsong and moving water further back.

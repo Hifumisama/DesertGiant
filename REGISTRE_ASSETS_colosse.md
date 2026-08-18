@@ -107,9 +107,11 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 - **Édition Qwen** — source : `CHAR_colosse_master`
   ```text
   Move the camera down to ground level beside the machine, looking steeply upward, framing the feet and lower legs with strong perspective distortion and the ankle articulation clearly visible.
+  Pose it standing motionless, both legs vertical and parallel, feet flat and side by side, weight evenly on both.
   Keep a plain neutral background with no ground and no horizon, and flat even lighting.
   ```
 - **Note** : réactivé après avoir été retiré au découpage v0.8. Les plans 80 et 90 ne montrent plus le colosse en entier — c'est cette référence qui porte désormais l'échelle. Le tirage existant est réutilisable après retrait du sable.
+- **Pose à l'arrêt obligatoire.** Le master est en appui dynamique ; un composite qui en dérive rendra toujours une foulée, quelles que soient les instructions. La pose jambes parallèles doit exister **dans cette référence**, pas être demandée au moment de la fusion.
 - **Fichier** : `—` · **Seed** : `—`
 
 ### `CHAR_colosse_epaule_tete` — *retiré*
@@ -480,13 +482,14 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 
 ### `FRAME_p80_debut`
 - **Statut** : ⬜ · **Plan** : 80 (première frame)
-- **Sources** : `DEC_oasis_lisiere`
-- **Édition Qwen**
+- **Sources** : `DEC_oasis_large` + `CHAR_colosse_master`
+- **Édition Qwen (multi-image)**
   ```text
-  Lower the camera close to the ground on the sand side, looking slightly upward, so the grass line sits high in the frame and the palms rise above it against the sky.
-  Leave the frame completely empty of any figure.
+  Lower the camera to the surface of the water, looking slightly upward across the pool, so still water fills the lower half of the frame and reflects the canopy, with palms rising on both sides and a dune visible beyond the far bank.
+  Place the machine standing in the far distance on the other side of the water, small enough to be seen in full figure from head to feet, its cannon arm at its right side and its fissures glowing.
+  Keep the low warm backlight raking through the palms.
   ```
-- **Note** : caméra basse, à hauteur d'un homme debout. C'est cette hauteur qui rendra les pieds énormes au plan suivant.
+- **Note** : le colosse doit être **entier et petit**. C'est la seule image du film où on peut le mesurer, et c'est ce qui rend mesurable ce qui suit : dans la dernière frame, le cadre ne le contient plus.
 - **Fichier** : `—` · **Seed** : `—`
 
 ### `FRAME_p80_fin`
@@ -494,11 +497,14 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 - **Sources** : `FRAME_p80_debut` + `CHAR_colosse_pied_contreplongee`
 - **Édition Qwen (multi-image)**
   ```text
-  Place two enormous armoured feet standing side by side at the edge of the thick grass, filling the lower half of the frame, the legs rising out of the top of the frame so the body is never visible.
-  Add deep footprints in the sand behind them coming from the left, and sand pushed up around the soles.
-  Keep the camera position, the grass line, the palms and the backlight exactly as in the first image.
+  Place two enormous armoured feet standing motionless in the shallow water, flat on the bottom and side by side, both legs vertical and parallel, level with each other and facing the camera, weight evenly on both, filling the lower half of the frame, the legs rising out of the top of the frame so the body is never visible.
+  Add water swirling and settling around the submerged soles, with ripples spreading outward toward the camera.
+  Keep the camera position, the palms, the dune beyond and the low warm backlight exactly as in the first image.
   ```
+- **Statut de production** : 🟡 première version tirée — à retirer en lumière basse et chaude, la version actuelle est en plein midi et ne raccorde pas avec les plans 50 à 70.
 - **Note** : **le corps ne doit jamais entrer dans le cadre.** Les jambes sortent par le haut. Rejeter tout tirage où l'on devine le torse : c'est tout l'enjeu du plan.
+- **Ne jamais écrire « walking » ici.** Le mot produit une foulée, un pied devant l'autre, et aucune formulation de la pose d'arrêt ne le contrebalance. L'arrivée se raconte par les empreintes qui s'achèvent aux pieds, pas par le mouvement.
+- Vérifier l'orientation des semelles : il entre par la gauche et regarde vers la droite, comme depuis le plan 30.
 - **Fichier** : `—` · **Seed** : `—`
 
 ### `FRAME_p90_debut`
@@ -506,7 +512,7 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 - **Sources** : `FRAME_p80_fin`
 - **Édition Qwen**
   ```text
-  Move the camera lower and closer to the feet, and turn it to a side view so one leg is nearer the camera than the other, keeping the grass line and the palms behind.
+  Move the camera lower and closer to the feet, and turn it to a side view so one leg is nearer the camera than the other, keeping the water around them and the palms behind.
   Keep the same lighting and the same time of day, and keep the body out of the frame above.
   ```
 - **Note** : ce n'est plus un raccord dans l'axe mais un changement de place — un resserrement sur des pieds ne donnerait que des pieds. Même lieu, même lumière, caméra déplacée.
@@ -517,9 +523,9 @@ Réglages par défaut, sauf mention contraire : **8 steps · CFG 1 · euler_ance
 - **Sources** : `FRAME_p90_debut` + `CHAR_colosse_agenouillement`
 - **Édition Qwen (multi-image)**
   ```text
-  Put the machine on one knee so that its knee, its closed left fist on the ground and its lowered head all come down into the frame from above, the head turned down toward its own hand.
-  Keep the cannon arm hanging at its side without touching the ground.
-  Keep the camera position, the grass line and the lighting exactly as in the first image.
+  Put the machine on one knee in the shallow water so that its knee breaking the surface, its closed left fist held just above the water and its lowered head all come down into the frame from above, the head turned down toward its own hand.
+  Keep the cannon arm hanging at its side without touching the water.
+  Keep the camera position, the water and the lighting exactly as in the first image.
   ```
 - **Note** : c'est l'image du film. Il était trop grand pour tenir dans le cadre ; il y entre en pliant le genou.
 - **Fichier** : `—` · **Seed** : `—`
